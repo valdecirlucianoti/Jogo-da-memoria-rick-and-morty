@@ -3,12 +3,24 @@
 <head>
     <meta charset='utf-8'>
     <meta http-equiv='X-UA-Compatible' content='IE=edge'>
-    <title>Page Title</title>
+    <title>Memory Game</title>
     <meta name='viewport' content='width=device-width, initial-scale=1'>
-    <link rel='stylesheet' type='text/css' media='screen' href='./../css/main.css'>
-    <script src='./../js/main.js'></script>
+    <link rel='stylesheet' type='text/css' media='screen' href='./../css/reset.css'>
+    <link rel='stylesheet' type='text/css' media='screen' href='./../css/login.css'>
+    <link rel="icon" href="./../images/icons8-morty-smith-16.png">
+
+    <script defer src='./../js/login.js'></script>
 </head>
 <body>
-    
+    <form class="login-form" action="">
+        <div class="login-header">
+            <img src="./../images/brain.png" alt="brain icon">
+            <h1>Memory Game</h1>
+        </div>
+
+        <input type="text" class="login-input" placeholder="Nome">
+        <button class="login-button" type="submit" disabled>Play</button>
+    </form>
+
 </body>
 </html>
