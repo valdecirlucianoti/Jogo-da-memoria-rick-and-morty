@@ -24,7 +24,7 @@ const createCard = (character) => {
     const front = createElements('div', 'face front');
     const back = createElements('div', 'face back');
 
-    front.style.bachgroudImage = `url('./../images/${character}.png')`;
+    front.style.backgroundImage = `url('../images/${character}.png')`;
     card.appendChild(front);
     card.appendChild(back);
     
@@ -32,12 +32,14 @@ const createCard = (character) => {
 };
 
 const loadGame = () => {
-
-    characters.forEach((character) => {
-        const card = createCard(character);
-        grid.appendChild(card);
+    const duplicateCharacters = [ ...characters, ...characters ];
+  
+    const shuffledArray = duplicateCharacters.sort(() => Math.random() - 0.5);
+  
+    shuffledArray.forEach((character) => {
+      const card = createCard(character);
+      grid.appendChild(card);
     });
-
-};
+  }
 
 loadGame();
