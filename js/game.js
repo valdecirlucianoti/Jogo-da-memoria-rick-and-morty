@@ -19,8 +19,22 @@ const createElements = (tag, className) => {
     return element;
 };
 
+let firstCard = "";
+let seconCard = "";
+
 const revealCard = (event) => {
-    event.target.parentNode.classList.add('reveal-card');
+    if(event.target.parentNode.className.includes('reveal-card')){
+      return;
+    }
+
+    if(firstCard == ""){
+      event.target.parentNode.classList.add('reveal-card');
+      firstCard = event.target.parentNode;
+    }else if (seconCard == ''){
+      event.target.parentNode.classList.add('reveal-card');
+      seconCard = event.target.parentNode;
+    }
+    
 };
 
 const createCard = (character) => {
