@@ -27,6 +27,7 @@
 
     border: 2px solid #39813a;
     border-radius: 5px;
+    transition: all 500ms ease;
 }
 
 .front {
@@ -43,4 +44,9 @@
 
 .reveal-card {
     transform: rotateY(180deg);
+}
+
+.disabled-card {
+    filter: saturate(0);
+    opacity: 0.5;
 }
