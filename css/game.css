@@ -41,6 +41,6 @@
     backface-visibility: hidden; /*relacionado a rotação de um objeto 3d*/
 }
 
-.card:hover {
+.reveal-card {
     transform: rotateY(180deg);
 }
